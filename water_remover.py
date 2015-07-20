@@ -116,8 +116,8 @@ bead_lower_z = np.average(bead_lower.coordinates()[:,2])
 
 #select waters
 water_sele = U.selectAtoms("resname " + str(args.w_resname))
-water_upper = water_sele.selectAtoms("prop z > " str(bead_upper_z + args.distance))
-water_lower = water_sele.selectAtoms("prop z < + " str(bead_lower_z - args.distance))
+water_upper = water_sele.selectAtoms("prop z > " + str(bead_upper_z + args.distance))
+water_lower = water_sele.selectAtoms("prop z < " + str(bead_lower_z - args.distance))
 water_to_keep = water_upper + water_lower
 
 #write file
