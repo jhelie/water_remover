@@ -124,6 +124,7 @@ water_to_keep = water_upper + water_lower
 #display
 print "Removing " + str(water_sele.numberOfAtoms() - water_to_keep.numberOfAtoms()) + " water particles.."
 print "New number of water particles: "  + str(water_to_keep.numberOfAtoms())
+print "Writing coordinates..."
 
 #write file
 not_water = U.selectAtoms("not resname " + str(args.w_resname))
